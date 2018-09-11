@@ -29,6 +29,7 @@ var detectCycle = function(head) {
       return s;
     }
   }
+  return null;
 };
 
 var a = new ListNode(1);
