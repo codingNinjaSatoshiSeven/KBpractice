@@ -20,7 +20,7 @@ var findRelativeRanks = function(nums) {
   }
   return nums.map(score =>{
     return map[score];
-  })
+  });
 };
 
 
