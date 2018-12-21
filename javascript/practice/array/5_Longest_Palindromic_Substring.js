@@ -19,16 +19,16 @@ var longestPalindrome = function(s) {
   var left, right;
 
   for(var i = 0; i < len; i++){
-      left = right = parseInt(i/2);
-      if(i%2 === 1){
-          right++;
-      }
+    left = right = parseInt(i/2);
+    if(i%2 === 1){
+      right++;
+    }
 
-      var str = expandFromCenterAndCheckForPalindrome(s,left,right);
+    var str = expandFromCenterAndCheckForPalindrome(s,left,right);
 
-      if(str.length > result.length){
-          result = str;
-      }
+    if(str.length > result.length){
+      result = str;
+    }
   }
   return result;
 };
@@ -43,8 +43,8 @@ var expandFromCenterAndCheckForPalindrome = function(s, left, right){
   // which it check if b === b as left === right
   // then a === a
   while(left >= 0 && right < s.length && s[left] === s[right]){
-      left--;
-      right++;
+    left--;
+    right++;
   }
 
   return s.substring(left+1, right);
