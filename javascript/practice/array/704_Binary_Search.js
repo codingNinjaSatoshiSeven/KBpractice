@@ -7,7 +7,6 @@ var search = function(nums, target) {
   var start = 0, end = nums.length -1;
   while (start <= end) {
     var mid = Math.ceil((start+ end)/2);
-    console.log("mid>>>", mid);
     if(nums[mid] === target) {
       return mid;
     } else if (target > nums[mid]) {
@@ -15,7 +14,6 @@ var search = function(nums, target) {
     } else {
       end = mid-1;
     }
-    console.log("start>>", start, end)
   }
   return -1;
 };
