@@ -26,7 +26,6 @@ function recurse(node, temp, sum){
   }
   if(!node.left && !node.right) {
     temp += node.val;
-    console.log("temp is >>>", temp);
     let res = parseInt(temp,2);
     if (!isNaN(res)) {
       sum.a += res;
